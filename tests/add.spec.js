@@ -8,7 +8,7 @@ const TODO_ITEMS = [
 ];
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('http://localhost:8080/');
+  await page.goto('http://localhost:80/');
 });
 
 test('add a todo item', async ({ page }) => {
