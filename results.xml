@@ -1,14 +1,12 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="7.149676999986172">
-<testsuite name="example.spec.js" timestamp="1658999978895" hostname="" tests="1" failures="0" skipped="0" time="1.884" errors="0">
-<testcase name="homepage has Playwright in title and get started link linking to the intro page" classname="[chromium] › example.spec.js:4:1 › homepage has Playwright in title and get started link linking to the intro page" time="1.884">
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="6.736995999991894">
+<testsuite name="add.spec.js" timestamp="1659010230194" hostname="" tests="2" failures="0" skipped="0" time="4.308" errors="0">
+<testcase name="add a todo item" classname="[chromium] › add.spec.js:14:1 › add a todo item" time="3.394">
+</testcase>
+<testcase name="complete a todo item" classname="[chromium] › add.spec.js:29:1 › complete a todo item" time="0.914">
 </testcase>
 </testsuite>
-<testsuite name="example.spec.js" timestamp="1658999978895" hostname="" tests="1" failures="0" skipped="0" time="1.828" errors="0">
-<testcase name="homepage has Playwright in title and get started link linking to the intro page" classname="[firefox] › example.spec.js:4:1 › homepage has Playwright in title and get started link linking to the intro page" time="1.828">
-</testcase>
-</testsuite>
-<testsuite name="example.spec.js" timestamp="1658999978895" hostname="" tests="1" failures="0" skipped="0" time="1.502" errors="0">
-<testcase name="homepage has Playwright in title and get started link linking to the intro page" classname="[webkit] › example.spec.js:4:1 › homepage has Playwright in title and get started link linking to the intro page" time="1.502">
+<testsuite name="example.spec.js" timestamp="1659010230194" hostname="" tests="1" failures="0" skipped="0" time="1.553" errors="0">
+<testcase name="homepage has Playwright in title and get started link linking to the intro page" classname="[chromium] › example.spec.js:4:1 › homepage has Playwright in title and get started link linking to the intro page" time="1.553">
 </testcase>
 </testsuite>
 </testsuites>

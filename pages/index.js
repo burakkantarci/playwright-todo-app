@@ -70,7 +70,7 @@ export default function Home() {
                             </a>
                             :
                             <form className={styles.cardForm} onSubmit={addTodo}>
-                                <input className={styles.cardInput} type="text"
+                                <input className={styles.cardInput} id="todo" type="text"
                                        name="todo" onChange={changeHandler}
                                        placeholder="Enter your exciting TODO item!"/>
                             </form>
