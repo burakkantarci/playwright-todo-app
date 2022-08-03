@@ -2,6 +2,10 @@
 
 Foresight integrated, comprehensive Todo app  with APIs, E2E tests with GitHub Actions enabled. 
 
+## Built with
+- [Next.js Todo App with Upstash](https://upstash.com/blog/nextjs-todo)
+- [Playwright](https://playwright.dev)
+
 ## Setup guide
 
 [Read the official blog](#)
