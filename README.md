@@ -1,5 +1,11 @@
 ![Cover img](https://playwright-todo-app.vercel.app/nextjsplaywright-example-image.png)
 
+[![Foresight Docs](https://foresight.service.thundra.io/public/api/v1/badge/test?repoId=8451a617-ce9a-4ace-b00a-c598523bd852)](https://foresight.docs.thundra.io/)
+
+[![Foresight Docs](https://foresight.service.thundra.io/public/api/v1/badge/success?repoId=8451a617-ce9a-4ace-b00a-c598523bd852)](https://foresight.docs.thundra.io/)
+
+[![Foresight Docs](https://foresight.service.thundra.io/public/api/v1/badge/utilization?repoId=8451a617-ce9a-4ace-b00a-c598523bd852)](https://foresight.docs.thundra.io/)
+
 # Next.js + Playwright + GitHub Actions Boilerplate
 Foresight integrated, comprehensive Todo app  with APIs, E2E tests with GitHub Actions enabled. 
 
@@ -9,7 +15,7 @@ Foresight integrated, comprehensive Todo app  with APIs, E2E tests with GitHub A
 
 ## Setup guide
 
-[Read the official blog](#)
+[Read the official blog](https://www.runforesight.com/blog/next-js-playwright-github-actions-boilerplate)
 
 ## Getting Started
 
