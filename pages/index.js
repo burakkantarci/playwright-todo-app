@@ -86,13 +86,15 @@ export default function Home() {
 
             <footer className={styles.footer}>
                 <a
-                    href="https://blog.upstash.com/nextjs-todo"
+                    href="https://www.runforesight.com/blog"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     Powered by{' '}
                     <span className={styles.logo}>
             <Image src="/logo.png" alt="Upstash Logo" width={87} height={25}/>
+            &
+            <Image src="/foresight-logo.svg" alt="Foresight Logo" width={87} height={25}/>
           </span>
                 </a>
             </footer>

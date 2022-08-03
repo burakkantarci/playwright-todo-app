@@ -129,8 +129,9 @@
 }
 
 .logo {
-  height: 1em;
   margin-left: 0.5rem;
+  display: flex;
+  gap: 16px;
 }
 
 @media (max-width: 600px) {
