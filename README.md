@@ -1,4 +1,10 @@
-Foresight integrated is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Cover img](https://playwright-todo-app.vercel.app/nextjsplaywright-example-image.png)
+
+Foresight integrated, comprehensive Todo app  with APIs, E2E tests with GitHub Actions enabled. 
+
+## Setup guide
+
+[Read the official blog](#)
 
 ## Getting Started
 
