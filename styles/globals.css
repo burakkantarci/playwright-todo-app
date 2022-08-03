@@ -14,3 +14,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.top-cta{
+  margin: 32px 64px;
+  padding: 16px;
+  border: 2px solid #0070f3;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  color: #0070f3;
+  text-decoration: underline;
+}
+.top-cta:hover{
+  color: #FFF;
+  background-color: #0070f3;
+}

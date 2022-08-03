@@ -58,6 +58,7 @@ export default function Home() {
 
             <main className={styles.main}>
                 <div className={styles.grid}>
+                    <a class="top-cta" href="https://www.runforesight.com/blog/next-js-playwright-github-actions-boilerplate">Learn how to use this boilerplate</a>
                     <h1 className={styles.title}>
                         TODO App with <a href="https://blog.upstash.com/nextjs-todo">Next.js!</a>
                         <br/>
