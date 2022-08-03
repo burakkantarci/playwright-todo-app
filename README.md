@@ -1,5 +1,6 @@
 ![Cover img](https://playwright-todo-app.vercel.app/nextjsplaywright-example-image.png)
 
+# Next.js + Playwright + GitHub Actions Boilerplate
 Foresight integrated, comprehensive Todo app  with APIs, E2E tests with GitHub Actions enabled. 
 
 ## Built with
