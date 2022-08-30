@@ -29,3 +29,15 @@ a {
   color: #FFF;
   background-color: #0070f3;
 }
+
+.clear-cta {
+  margin: 32px 64px;
+  padding: 16px;
+  border: 2px solid #bc2e4d;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  background: #bc2e4d;
+  color: #ffffff;
+  text-decoration: underline;
+}
