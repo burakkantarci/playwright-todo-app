@@ -37,4 +37,4 @@ jobs:
           api_key: ${{ secrets.FRS_PROD_API_KEY }}
           test_format: JUNIT
           test_framework: JEST
-          test_path: ./results.xml   
+          test_path: ./results.xml

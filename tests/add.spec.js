@@ -20,7 +20,7 @@ test('add a todo item', async ({ page }) => {
   await page.locator('#todo').press('Enter');
 
   // Make sure the list only has one todo item.
-  await expect(page.locator('.Home_card__2SdtB')).toHaveText([
+  await expect(page.locator('.Home_card__2SdtB').first()).toHaveText([
     todoName
   ]);
 
@@ -32,7 +32,7 @@ test('complete a todo item', async ({ page }) => {
 
   // Text input
   await page.click(`.Home_card__2SdtB:has-text("buy some cheese")`);
-  
+
   // Make sure the list only has one todo item.
   await expect(page.locator('.Home_card__2SdtB')).not.toHaveText([todoName]);
 });
