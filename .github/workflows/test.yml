@@ -19,9 +19,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14
-      - run: npm install
-      - name: Install Playwright
-        run: |
+      - run: |
+          npm install
+          npx playwright install
           npx nyc next dev &
       - name: Run Playwright tests
         run: npx playwright test
