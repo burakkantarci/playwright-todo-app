@@ -21,10 +21,10 @@ jobs:
           node-version: 14
       - run: |
           npm install
-          npx playwright install --with-deps
+          npx playwright install chromium --with-deps
           npx nyc next dev &
       - name: Run Playwright tests
-        run: npx playwright test
+        run: npm run test
       - name: Kill server
         run: |
           kill -9 $(lsof -t -i:3000)
