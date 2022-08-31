@@ -36,3 +36,6 @@ yarn-error.log*
 /playwright-report/
 /playwright/.cache/
 .env
+/test-results/
+/playwright-report/
+/playwright/.cache/

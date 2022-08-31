@@ -75,9 +75,9 @@ export default function Home() {
                     </a>
                     {
                         loading ?
-                            <a href="#" className={styles.card}>
+                            <span className={styles.loading}>
                                 <img src="/loader.gif" />
-                            </a>
+                            </span>
                             :
                             <form className={styles.cardForm} onSubmit={addTodo}>
                                 <input className={styles.cardInput} id="todo" type="text"
@@ -87,10 +87,15 @@ export default function Home() {
                             </form>
                     }
 
-                    {data.map((item, index) =>
-                        <a href="#" onClick={() => removeTodo(item)} className={styles.card}>
-                            <p>{decodeURIComponent(item)}</p>
-                        </a>)}
+                    {
+                        data !== [] ?
+                            data.map((item, index) =>
+                                <a key={index} href="#" onClick={() => removeTodo(item)} className={styles.card}>
+                                    <p>{decodeURIComponent(item)}</p>
+                                </a>)
+                            :
+                            <br />
+                    }
                 </div>
             </main >
 

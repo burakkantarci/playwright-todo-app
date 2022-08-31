@@ -11,6 +11,6 @@ export default async (req, res) => {
     }
     const todo = encodeURI(req.query.todo)
 
-    const data = await redis.lrem('todo', 1, todo)
+    const data = await redis.lrem('todo_oz', 1, todo)
     return res.status(200).json(data);
 }

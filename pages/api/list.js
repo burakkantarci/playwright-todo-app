@@ -6,6 +6,6 @@ const redis = new Redis({
 })
 
 export default async (_, res) => {
-    const data = await redis.lrange('todo', 0, 100);
+    const data = await redis.lrange('todo_oz', 0, 100);
     return res.status(200).json(data);
 }
