@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:nyc": "nyc next dev",
     "build": "next build",
     "start": "next start",
     "test": "playwright test",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@playwright/test": "^1.25.1",
     "babel-plugin-istanbul": "6.1.1",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "playwright-test-coverage": "^1.1.0"
   }
 }
