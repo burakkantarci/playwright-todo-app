@@ -16,17 +16,18 @@ jobs:
           api_key: ${{ secrets.FRS_PROD_API_KEY }}
       - uses: actions/checkout@v2
       - name: Set up Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 14
       - run: npm install
       - name: Install Playwright
-        run: npx playwright install --with-deps
+        run: |
+          npx nyc next dev &
       - name: Run Playwright tests
-        run: npm run test
-        env:
-          # This might depend on your test-runner/language binding
-          PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}
+        run: npx playwright test
+      - name: Kill server
+        run: |
+          kill -9 $(lsof -t -i:3000)
       - name: Foresight test kit
         if: success() || failure()
         uses: thundra-io/foresight-test-kit-action@v1
@@ -35,3 +36,5 @@ jobs:
           test_format: JUNIT
           test_framework: JEST
           test_path: ./results.xml
+          coverage_format: COBERTURA/XML
+          coverage_path: coverage/*.xml
