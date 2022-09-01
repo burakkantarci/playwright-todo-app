@@ -75,22 +75,27 @@ export default function Home() {
                     </a>
                     {
                         loading ?
-                            <a href="#" className={styles.card}>
+                            <span className={styles.loading}>
                                 <img src="/loader.gif" />
-                            </a>
+                            </span>
                             :
                             <form className={styles.cardForm} onSubmit={addTodo}>
                                 <input className={styles.cardInput} id="todo" type="text"
                                     name="todo" onChange={changeHandler}
+                                    autoComplete="off"
                                     placeholder="Enter your exciting TODO item!" />
                             </form>
                     }
 
-                    {data.map((item, index) =>
-                        <a key={`${item}_${index}`} href="#" onClick={() => removeTodo(item)} className={styles.card}>
-                            <p>{item}</p>
-                        </a>)}
-
+                    {
+                        data !== [] ?
+                            data.map((item, index) =>
+                                <a key={index} href="#" onClick={() => removeTodo(item)} className={styles.card}>
+                                    <p>{decodeURIComponent(item)}</p>
+                                </a>)
+                            :
+                            <br />
+                    }
                 </div>
             </main >
 
@@ -103,7 +108,7 @@ export default function Home() {
                     Powered by{' '}
                     <span className={styles.logo}>
                         <Image src="/logo.png" alt="Upstash Logo" width={87} height={25} />
-                        &
+                        &amp;
                         <Image src="/foresight-logo.svg" alt="Foresight Logo" width={87} height={25} />
                     </span>
                 </a>

@@ -4,19 +4,23 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:nyc": "nyc next dev",
     "build": "next build",
     "start": "next start",
-    "test": "playwright test"
+    "test": "playwright test",
+    "pretest": "rm -rf .next/ coverage/ .nyc_output/"
   },
   "dependencies": {
     "@upstash/redis": "^1.12.0",
-    "dotenv": "^16.0.1",
+    "dotenv": "^16.0.2",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@playwright/test": "1.24.1",
-    "playwright": "1.24.1"
+    "@playwright/test": "^1.25.1",
+    "babel-plugin-istanbul": "6.1.1",
+    "nyc": "^15.1.0",
+    "playwright-test-coverage": "^1.1.0"
   }
 }
