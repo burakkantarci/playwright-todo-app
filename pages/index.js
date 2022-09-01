@@ -30,13 +30,6 @@ export default function Home() {
             })
     }
 
-    let clearTodo = () => {
-        fetch('/api/clear')
-            .then(_ => {
-                loadTodos()
-            })
-    }
-
     let loadTodos = () => {
         fetch('/api/list')
             .then(res => res.json())
@@ -70,9 +63,6 @@ export default function Home() {
                         <br />
                     </h1>
                     <br />
-                    <a className="clear-cta" href="#" onClick={() => clearTodo()}>
-                        Clear
-                    </a>
                     {
                         loading ?
                             <span className={styles.loading}>

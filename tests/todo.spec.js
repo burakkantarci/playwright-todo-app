@@ -65,22 +65,3 @@ test('complete a todo item', async ({ page }) => {
   console.log("complete final: ", finalCount);
   expect(finalCount).toBe(initialCount);
 });
-
-test('clear all todos', async ({ page }) => {
-  const initalCards = page.locator('.Home_card__2SdtB');
-  const initialCount = await initalCards.count();
-
-  if (initialCount > 0) {
-    const clearAll = page.locator('.clear-cta');
-    await clearAll.click();
-  }
-
-  await page.reload();
-  await page.locator('[placeholder="Enter your exciting TODO item\!"]').waitFor()
-
-  const finalCards = page.locator('.Home_card__2SdtB');
-  const finalCount = await finalCards.count();
-
-  console.log("clear final: ", finalCount);
-  expect(finalCount).toBe(0);
-})
