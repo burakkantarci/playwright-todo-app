@@ -62,18 +62,27 @@ test('complete a todo item', async ({ page }) => {
   const finalCards = page.locator('.Home_card__2SdtB');
   const finalCount = await finalCards.count();
 
-  console.log("complete final: ", finalCount);
   expect(finalCount).toBe(initialCount);
 });
 
-test('clear all todos', async ({ page }) => {
+test('clear one todo', async ({ page }) => {
   const initalCards = page.locator('.Home_card__2SdtB');
   const initialCount = await initalCards.count();
+  expect(initialCount).toBe(0);
 
-  if (initialCount > 0) {
-    const clearAll = page.locator('.clear-cta');
-    await clearAll.click();
-  }
+  let todoName = TODO_ITEMS[0];
+
+  // Text input
+  await page.locator('#todo').fill(todoName);
+  await page.locator('#todo').press('Enter');
+
+  // Make sure the list only has one todo item.
+  await expect(page.locator('.Home_card__2SdtB').first()).toHaveText([
+    todoName
+  ]);
+
+  const clearAll = page.locator('.clear-cta');
+  await clearAll.click();
 
   await page.reload();
   await page.locator('[placeholder="Enter your exciting TODO item\!"]').waitFor()
@@ -81,6 +90,43 @@ test('clear all todos', async ({ page }) => {
   const finalCards = page.locator('.Home_card__2SdtB');
   const finalCount = await finalCards.count();
 
-  console.log("clear final: ", finalCount);
+  expect(finalCount).toBe(0);
+})
+
+test('clear two todos', async ({ page }) => {
+  const initalCards = page.locator('.Home_card__2SdtB');
+  const initialCount = await initalCards.count();
+  expect(initialCount).toBe(0);
+
+  let firstTodoName = TODO_ITEMS[0];
+  let secondTodoName = TODO_ITEMS[1];
+
+  // Text input
+  await page.locator('#todo').fill(firstTodoName);
+  await page.locator('#todo').press('Enter');
+
+  // Make sure the list only has one todo item.
+  await expect(page.locator('.Home_card__2SdtB').first()).toHaveText([
+    firstTodoName
+  ]);
+
+  // Text input
+  await page.locator('#todo').fill(secondTodoName);
+  await page.locator('#todo').press('Enter');
+
+  // Make sure the list only has one todo item.
+  await expect(page.locator('.Home_card__2SdtB').first()).toHaveText([
+    secondTodoName
+  ]);
+
+  const clearAll = page.locator('.clear-cta');
+  await clearAll.click();
+
+  await page.reload();
+  await page.locator('[placeholder="Enter your exciting TODO item\!"]').waitFor()
+
+  const finalCards = page.locator('.Home_card__2SdtB');
+  const finalCount = await finalCards.count();
+
   expect(finalCount).toBe(0);
 })
