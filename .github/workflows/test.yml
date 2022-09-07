@@ -39,7 +39,7 @@ jobs:
         if: always()
         run: |
           lsof -t -i:3000
-          kill -9 $(lsof -t -i:3000)
+          kill -2 $(lsof -t -i:3000)
       - name: Foresight test kit
         if: success() || failure()
         uses: runforesight/foresight-test-kit-action@v1
