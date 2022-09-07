@@ -42,7 +42,7 @@ jobs:
           kill -9 $(lsof -t -i:3000)
       - name: Foresight test kit
         if: success() || failure()
-        uses: thundra-io/foresight-test-kit-action@v1
+        uses: runforesight/foresight-test-kit-action@v1
         with:
           api_key: ${{ secrets.FRS_PROD_API_KEY }}
           test_format: JUNIT
