@@ -9,8 +9,8 @@ on:
   pull_request:
     branches: ["main"]
 env:
-  FORESIGHT_UPLOADER_SIGNER_URL: https://upload.thundra.us
-  WORKFLOW_TELEMETRY_BASE_URL: https://foresight.service.thundra.us
+  FORESIGHT_UPLOADER_SIGNER_URL: https://upload.service.runforesight.us/
+  WORKFLOW_TELEMETRY_BASE_URL: https://api.service.runforesight.us
   
 jobs:
   build:
