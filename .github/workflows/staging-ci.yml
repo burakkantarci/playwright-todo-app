@@ -16,7 +16,7 @@ jobs:
       - name: Collect Workflow Telemetry
         uses: runforesight/foresight-workflow-kit-action@v1
         with:
-          api_key: ${{ secrets.FRS_LAB_API_KEY }}
+          api_key: ${{ secrets.FRS_STAGING_TOKEN }}
       - uses: actions/checkout@v2
       - name: Set up Node.js
         uses: actions/setup-node@v1
