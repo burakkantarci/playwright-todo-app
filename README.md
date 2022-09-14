@@ -5,7 +5,7 @@
 [![Foresight Docs](https://foresight.service.thundra.io/public/api/v1/badge/utilization?repoId=8451a617-ce9a-4ace-b00a-c598523bd852)](https://foresight.docs.thundra.io/)
 
 # Next.js + Playwright + GitHub Actions Boilerplate
-Foresight integrated, comprehensive Todo app  with APIs, E2E tests with GitHub Actions enabled. 
+Foresight integrated, comprehensive Todo app  with APIs, E2E tests with GitHub Actions enabled!
 
 ## Built with
 - [Next.js Todo App with Upstash](https://upstash.com/blog/nextjs-todo)
